@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="stylesheet" href="static/vendor/tiny-brutalism.css">
+<link rel="stylesheet" href="static/site.css">
+<script src="static/peek.js" defer></script>
+<title>Tools - mbse.cool</title>
+</head>
+<body>
+<p><b><a href="index.html">mbse.cool</a></b>: <a href="languages.html">Languages</a> | <a href="methods.html">Methods</a> | <a href="tools.html">Tools</a> | <a href="vendors.html">Vendors</a></p>
+<hr>
+<h1><svg class="pictogram" width="60" height="52" viewBox="0 0 60 52" role="img" aria-label="Tool">
+<title>Tool</title>
+<polygon class="face" points="30,2 16,26 44,26"/>
+<polygon class="face" points="16,26 2,50 30,50"/>
+<polygon class="face on" points="44,26 30,50 58,50"/>
+<polygon class="face" points="16,26 44,26 30,50"/>
+</svg>Tools</h1>
+<p>TODO</p>
+<h2 id="suites">Suites</h2>
+<p>TODO</p>
+<div class="scroll">
+<table border="1" cellpadding="4">
+<tr><th>Suite</th><th>Vendor</th><th>Tools</th></tr>
+<tr>
+<td><a href="Q3187939.html">Astah</a></td>
+<td><a href="vendor-Q141493895.html">Change Vision, Inc.</a></td>
+<td><a href="Q141678567.html">Astah SysML</a>, <a href="Q141678568.html">Astah System Safety</a></td>
+</tr>
+<tr>
+<td><a href="Q467731.html">CATIA</a></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td><a href="Q3716878.html">Dymola</a>, <a href="Q10299730.html">ICEM Surf</a>, <a href="Q11690245.html">MagicDraw</a></td>
+</tr>
+<tr>
+<td><a href="Q4299727.html">Creo</a></td>
+<td><a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td><a href="Q926821.html">Creo Elements/Pro</a>, <a href="Q5184179.html">Creo Elements/View</a></td>
+</tr>
+<tr>
+<td><a href="Q316333.html">DELMIA</a></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td><a href="Q125626496.html">DELMIAWorks</a></td>
+</tr>
+<tr>
+<td>IBM Rational</td>
+<td><a href="vendor-Q37156.html">IBM</a></td>
+<td><a href="Q1154767.html">IBM Rational DOORS</a>, <a href="Q5968978.html">IBM Rational Rose XDE</a>, <a href="Q3420095.html">IBM Rational Software Architect</a>, <a href="Q1977027.html">Rational Rhapsody</a></td>
+</tr>
+<tr>
+<td>MATLAB &amp; Simulink</td>
+<td><a href="vendor-Q1518683.html">MathWorks</a></td>
+<td><a href="Q169478.html">MATLAB</a>, <a href="Q37805571.html">MATLAB</a>, <a href="Q17086474.html">Optimization Toolbox</a>, <a href="Q7226954.html">Polyspace</a>, <a href="Q606550.html">Simulink</a>, <a href="Q1266659.html">Stateflow</a></td>
+</tr>
+<tr>
+<td><a href="Q3459626.html">SIMULIA</a></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td><a href="Q728658.html">Abaqus</a></td>
+</tr>
+</table>
+</div>
+<h2>All tools</h2>
+<ul>
+<li><a href="#mainline">Mainline vendors and tools</a> (39)</li>
+<li><a href="#uml_case_tools">UML and CASE tools</a> (28)</li>
+<li><a href="#linked_to_language">Linked to a modelling language</a> (9)</li>
+</ul>
+<h2 id="mainline">Mainline vendors and tools</h2>
+<p>TODO <a href="https://query.wikidata.org/#%23%20Mainline%20vendors%20and%20tools%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fdev%20%7B%20wd%3AQ1172038%20wd%3AQ1760641%20wd%3AQ15898201%20wd%3AQ295774%20wd%3AQ1518683%20wd%3AQ7573969%20wd%3AQ7044399%20wd%3AQ8075081%20wd%3AQ55637178%20wd%3AQ3058934%20%7D%0A%20%20%20%20%20%20%3Fitem%20wdt%3AP178%20%3Fdev%20.%0A%20%20%20%20%7D%20UNION%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fitem%20%7B%20wd%3AQ1977027%20wd%3AQ1154767%20wd%3AQ3420095%20wd%3AQ21965864%20wd%3AQ24027074%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ235557%20%7D%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<div class="scroll">
+<table border="1" cellpadding="4">
+<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>OS</th><th>Languages</th></tr>
+<tr>
+<td><a href="Q728658.html">Abaqus</a><br><small>in SIMULIA</small></td>
+<td>software</td>
+<td>computer-aided engineering, simulation software</td>
+<td>1978</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q5281973.html">BIOVIA Discovery Studio</a></td>
+<td>molecular modeling software</td>
+<td>chemistry software</td>
+<td></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>SUSE Linux Enterprise Server</td><td></td>
+</tr>
+<tr>
+<td><a href="Q21965864.html">Capella</a></td>
+<td>software environment for model-based systems engineering</td>
+<td>open-source software, software</td>
+<td></td>
+<td></td>
+<td>Linux, macOS, Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q467731.html">CATIA</a></td>
+<td>Advanced 3D design and engineering software, brand of Dassault Systèmes</td>
+<td>brand, company, computer-aided design software, product lifecycle management</td>
+<td>1977</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows, Unix</td><td></td>
+</tr>
+<tr>
+<td><a href="Q141119929.html">CENTRIC PLM</a></td>
+<td>Product lifecycle management solutions for retail and fashion, brand of Dassault Systèmes.</td>
+<td>brand, company, computer-aided design software, product lifecycle management</td>
+<td>2004</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q4299727.html">Creo</a></td>
+<td>Computer-aided design software suite</td>
+<td>computer-aided design software</td>
+<td>2011</td>
+<td><a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q926821.html">Creo Elements/Pro</a><br><small>in Creo</small></td>
+<td>CAD software</td>
+<td>3D computer graphics software, computer-aided design software</td>
+<td>1987</td>
+<td><a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q5184179.html">Creo Elements/View</a><br><small>in Creo</small></td>
+<td>suite of digital mockup and product visualization software applications</td>
+<td>software</td>
+<td>1997</td>
+<td><a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q316333.html">DELMIA</a></td>
+<td>manufacturing and operations management software, brand of Dassault Systèmes</td>
+<td>brand, company, software</td>
+<td>2000</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows, Unix</td><td></td>
+</tr>
+<tr>
+<td><a href="Q125626496.html">DELMIAWorks</a><br><small>in DELMIA</small></td>
+<td>Manufacturing ERP</td>
+<td>ERP software</td>
+<td>1989</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q2436588.html">DraftSight</a></td>
+<td>CAD software used to create, edit, view, and markup 2D drawings and 3D design</td>
+<td>computer-aided design software, software</td>
+<td></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Classic Mac OS, Linux, macOS, Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q5206095.html">DS-2</a></td>
+<td>product management software</td>
+<td>software</td>
+<td></td>
+<td><a href="vendor-Q8075081.html">Zuken</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q3716878.html">Dymola</a><br><small>in CATIA</small></td>
+<td>commercial modeling and simulation environment</td>
+<td>software</td>
+<td></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q114776615.html">eCADSTAR</a></td>
+<td></td>
+<td>electronic design automation, electronics circuit design software, software</td>
+<td></td>
+<td><a href="vendor-Q8075081.html">Zuken</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q837012.html">Enterprise Architect</a></td>
+<td>visual modeling and design tool based on the OMG UML</td>
+<td>proprietary software, UML tool</td>
+<td>2000</td>
+<td><a href="vendor-Q7573969.html">Sparx Systems</a></td>
+<td>Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q24893639.html">GEOVIA</a></td>
+<td>Software for geological modeling and mining operations, brand of Dassault Systèmes</td>
+<td>brand, company, enterprise, software</td>
+<td>2012</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q666397.html">I-DEAS</a></td>
+<td>computer-aided design software</td>
+<td>computer-aided design software</td>
+<td></td>
+<td><a href="vendor-Q15898201.html">Siemens Digital Industries Software</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q1154767.html">IBM Rational DOORS</a><br><small>in IBM Rational</small></td>
+<td>requirements management tool</td>
+<td>application software, list of requirements engineering tools</td>
+<td></td>
+<td><a href="vendor-Q37156.html">IBM</a>, <a href="vendor-Q689176.html">Telelogic</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q3420095.html">IBM Rational Software Architect</a><br><small>in IBM Rational</small></td>
+<td>development environment</td>
+<td>integrated development environment</td>
+<td></td>
+<td><a href="vendor-Q37156.html">IBM</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q10299730.html">ICEM Surf</a><br><small>in CATIA</small></td>
+<td>Computer-aided industrial design software</td>
+<td>software</td>
+<td></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q11690245.html">MagicDraw</a><br><small>in CATIA</small></td>
+<td>Systems modelling software</td>
+<td>software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q7044399.html">No Magic</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q169478.html">MATLAB</a><br><small>in MATLAB &amp; Simulink</small></td>
+<td>numerical computing environment</td>
+<td>application software, mathematical software, multi-paradigm programming language, programming language</td>
+<td>1984</td>
+<td><a href="vendor-Q92871.html">Cleve Moler</a>, <a href="vendor-Q1518683.html">MathWorks</a></td>
+<td>Linux, macOS, Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q37805571.html">MATLAB</a><br><small>in MATLAB &amp; Simulink</small></td>
+<td>fourth-generation programming language</td>
+<td>array programming language, imperative programming language, interpreted language, programming language</td>
+<td>1970</td>
+<td><a href="vendor-Q1518683.html">MathWorks</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q4272073.html">MKS Toolkit</a></td>
+<td>software package</td>
+<td>software</td>
+<td></td>
+<td><a href="vendor-Q6716456.html">MKS Inc.</a>, <a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q1465654.html">NX</a></td>
+<td>CAD software</td>
+<td>computer-aided design software, computer-aided manufacturing software</td>
+<td>1978</td>
+<td><a href="vendor-Q15898201.html">Siemens Digital Industries Software</a></td>
+<td>Mac operating system, Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q24027074.html">Openmodelica</a></td>
+<td>free and open source environment based on the Modelica modeling language for modeling</td>
+<td>declarative programming language, programming language</td>
+<td></td>
+<td></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q17086474.html">Optimization Toolbox</a><br><small>in MATLAB &amp; Simulink</small></td>
+<td></td>
+<td>software</td>
+<td></td>
+<td><a href="vendor-Q1518683.html">MathWorks</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q7226954.html">Polyspace</a><br><small>in MATLAB &amp; Simulink</small></td>
+<td>static program analysis tool</td>
+<td>software</td>
+<td>1999</td>
+<td><a href="vendor-Q1518683.html">MathWorks</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q7246628.html">Pro/DESKTOP</a></td>
+<td>discontinued computer-aided design program</td>
+<td>video game</td>
+<td></td>
+<td><a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td>personal computer</td><td></td>
+</tr>
+<tr>
+<td><a href="Q1977027.html">Rational Rhapsody</a><br><small>in IBM Rational</small></td>
+<td>software</td>
+<td>software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q37156.html">IBM</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q828742.html">Scilab</a></td>
+<td>free and open source software for numerical computation</td>
+<td>numerical software, programming language</td>
+<td></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Berkeley Software Distribution, Linux, macOS, Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q2819258.html">Simcenter Amesim</a></td>
+<td>multiphysic 0D/1D simulation software for digital twin models</td>
+<td>software</td>
+<td>1995</td>
+<td><a href="vendor-Q15898201.html">Siemens Digital Industries Software</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q3459626.html">SIMULIA</a></td>
+<td>Simulation and analysis software for engineering, a brand of Dassault Systèmes.</td>
+<td>brand, business, company, enterprise, software</td>
+<td>1978</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q606550.html">Simulink</a><br><small>in MATLAB &amp; Simulink</small></td>
+<td>programming language</td>
+<td>programming language, software, visual programming language</td>
+<td></td>
+<td><a href="vendor-Q1518683.html">MathWorks</a></td>
+<td>Linux, macOS, Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q644575.html">Solid Edge</a></td>
+<td>computer-aided 3D modelling, rendering and assembly software</td>
+<td>computer-aided design software</td>
+<td>1995</td>
+<td><a href="vendor-Q15898201.html">Siemens Digital Industries Software</a></td>
+<td>Microsoft Windows, Windows 10, Windows 7, Windows 8, Windows 8.1</td><td></td>
+</tr>
+<tr>
+<td><a href="Q751281.html">SOLIDWORKS</a></td>
+<td>3D CAD design and engineering software, brand of Dassault Systèmes.</td>
+<td>brand, computer-aided design software, organization, solid modeling</td>
+<td>1995</td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q1266659.html">Stateflow</a><br><small>in MATLAB &amp; Simulink</small></td>
+<td>control logic tool used to model reactive systems via state machines and flow charts within a Simulink model</td>
+<td>programming language, visual programming language</td>
+<td></td>
+<td><a href="vendor-Q1518683.html">MathWorks</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q3560836.html">Virtools</a></td>
+<td>graphics engine</td>
+<td>graphics engine</td>
+<td></td>
+<td><a href="vendor-Q1172038.html">Dassault Systèmes</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+<tr>
+<td><a href="Q8024086.html">Windchill</a></td>
+<td>PLM application</td>
+<td>software</td>
+<td></td>
+<td><a href="vendor-Q1760641.html">Parametric Technology Corporation</a></td>
+<td>Microsoft Windows</td><td></td>
+</tr>
+</table>
+</div>
+<h2 id="uml_case_tools">UML and CASE tools</h2>
+<p>TODO <a href="https://query.wikidata.org/#%23%20UML%20and%20CASE%20tools%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20VALUES%20%3Fcls%20%7B%20wd%3AQ2467310%20wd%3AQ28059995%20wd%3AQ868714%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP31%20%3Fcls%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<div class="scroll">
+<table border="1" cellpadding="4">
+<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>OS</th><th>Languages</th></tr>
+<tr>
+<td><a href="Q647784.html">ArgoUML</a></td>
+<td>UML diagramming application</td>
+<td>free software, UML tool</td>
+<td>1999</td>
+<td></td>
+<td>Java virtual machine</td><td><a href="Q169411.html">Unified Modeling Language</a>, <a href="Q548264.html">XML Metadata Interchange</a></td>
+</tr>
+<tr>
+<td><a href="Q3187939.html">Astah</a></td>
+<td>UML and SysML modeling tool developed by Change Vision, Inc.</td>
+<td>proprietary software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q141493895.html">Change Vision, Inc.</a></td>
+<td>Java virtual machine, Linux, macOS, Microsoft Windows</td><td><a href="Q2117885.html">Systems Modeling Language</a>, <a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q2125673.html">CA Gen</a></td>
+<td>application development environment marketed by CA Technologies</td>
+<td>CASE tool</td>
+<td></td>
+<td><a href="vendor-Q600624.html">CA Technologies</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q837012.html">Enterprise Architect</a></td>
+<td>visual modeling and design tool based on the OMG UML</td>
+<td>proprietary software, UML tool</td>
+<td>2000</td>
+<td><a href="vendor-Q7573969.html">Sparx Systems</a></td>
+<td>Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q1985081.html">erwin Data Modeler</a></td>
+<td>data modeling software</td>
+<td>CASE tool</td>
+<td></td>
+<td><a href="vendor-Q600624.html">CA Technologies</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q1493825.html">Gaphor</a></td>
+<td>UML and SysML modeling software</td>
+<td>free software, modelling software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q116263062.html">Arjan Molenaar</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q5968978.html">IBM Rational Rose XDE</a><br><small>in IBM Rational</small></td>
+<td>Software</td>
+<td>software, UML tool</td>
+<td>1994</td>
+<td><a href="vendor-Q37156.html">IBM</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q96607373.html">JetUML</a></td>
+<td>a simple Unified Modeling Language (UML) editor written in Java</td>
+<td>UML tool</td>
+<td>2015</td>
+<td></td>
+<td>Java platform, Linux, macOS, Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q11690245.html">MagicDraw</a><br><small>in CATIA</small></td>
+<td>Systems modelling software</td>
+<td>software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q7044399.html">No Magic</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q122779187.html">Microsoft Visual Modeler</a></td>
+<td>Tool for modeling software</td>
+<td>software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q2283.html">Microsoft</a></td>
+<td>Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q1941824.html">Modelio</a></td>
+<td>open-source UML tool developed by Modeliosoft</td>
+<td>free software, UML tool</td>
+<td></td>
+<td></td>
+<td>Java virtual machine, Linux, macOS, Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q6953260.html">NClass</a></td>
+<td></td>
+<td>free software, UML tool</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q1475622.html">ObjectiF</a></td>
+<td></td>
+<td>CASE tool</td>
+<td>1992</td>
+<td></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q7099261.html">Oracle Designer</a></td>
+<td>data modeling software</td>
+<td>CASE tool, software</td>
+<td></td>
+<td><a href="vendor-Q19900.html">Oracle Corporation</a></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q7133257.html">Papyrus</a></td>
+<td>UML2 graphical editing tool based on Eclipse</td>
+<td>free software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q868550.html">Alternative Energies and Atomic Energy Commission</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q18346546.html">PlantUML</a></td>
+<td>tool to create UML diagrams from a plain text language</td>
+<td>open-source software, UML tool</td>
+<td></td>
+<td></td>
+<td>cross-platform, Linux, macOS, Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q2105623.html">Poseidon for UML</a></td>
+<td>UML tool</td>
+<td>software, UML tool</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q10852107.html">PSL/PSA</a></td>
+<td></td>
+<td>CASE tool</td>
+<td></td>
+<td></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q104658959.html">Q104658959</a></td>
+<td></td>
+<td>computer-aided software engineering</td>
+<td></td>
+<td></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><a href="Q1977027.html">Rational Rhapsody</a><br><small>in IBM Rational</small></td>
+<td>software</td>
+<td>software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q37156.html">IBM</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q7554208.html">Software Ideas Modeler</a></td>
+<td>tool</td>
+<td>CASE tool, UML tool</td>
+<td></td>
+<td></td>
+<td>Microsoft Windows</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q996596.html">StarUML</a></td>
+<td>UML diagram software</td>
+<td>free software, UML tool</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q379327.html">Together</a></td>
+<td>UML/CASE software development tool generating code based on model</td>
+<td>integrated development environment, UML tool</td>
+<td></td>
+<td><a href="vendor-Q210075.html">Borland</a>, <a href="vendor-Q1931458.html">Micro Focus International</a>, <a href="vendor-Q7173313.html">Peter Coad</a></td>
+<td>cross-platform software, Java virtual machine</td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q1606279.html">Umbrello</a></td>
+<td>Unified Modelling Language (UML) diagram program</td>
+<td>UML tool</td>
+<td></td>
+<td></td>
+<td>Unix-like operating system</td><td><a href="Q169411.html">Unified Modeling Language</a>, <a href="Q548264.html">XML Metadata Interchange</a></td>
+</tr>
+<tr>
+<td><a href="Q1647369.html">UML node</a></td>
+<td>computational resource upon which UML artifacts may be deployed for execution</td>
+<td>UML tool</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q956141.html">UMLet</a></td>
+<td>UML tool</td>
+<td>free and open-source software, UML tool</td>
+<td>2002</td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q7865175.html">UModel</a></td>
+<td>UML tool</td>
+<td>software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q4033839.html">Altova</a></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q1029024.html">Visual Paradigm for UML</a></td>
+<td>software</td>
+<td>CASE tool</td>
+<td></td>
+<td></td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<h2 id="linked_to_language">Linked to a modelling language</h2>
+<p>TODO <a href="https://query.wikidata.org/#%23%20Linked%20to%20a%20modelling%20language%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fcls%20%7B%20wd%3AQ1941921%20wd%3AQ29077376%20wd%3AQ362356%20%7D%0A%20%20%20%20%20%20%3Flang%20wdt%3AP31%20%3Fcls%20.%0A%20%20%20%20%7D%20UNION%20%7B%0A%20%20%20%20%20%20%3Flang%20wdt%3AP178%7Cwdt%3AP123%7Cwdt%3AP1056%20wd%3AQ252733%20.%0A%20%20%20%20%7D%0A%20%20%20%20%3Fitem%20wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%20%3Flang%20.%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ7397%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<div class="scroll">
+<table border="1" cellpadding="4">
+<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>OS</th><th>Languages</th></tr>
+<tr>
+<td><a href="Q647784.html">ArgoUML</a></td>
+<td>UML diagramming application</td>
+<td>free software, UML tool</td>
+<td>1999</td>
+<td></td>
+<td>Java virtual machine</td><td><a href="Q169411.html">Unified Modeling Language</a>, <a href="Q548264.html">XML Metadata Interchange</a></td>
+</tr>
+<tr>
+<td><a href="Q3187939.html">Astah</a></td>
+<td>UML and SysML modeling tool developed by Change Vision, Inc.</td>
+<td>proprietary software, UML tool</td>
+<td></td>
+<td><a href="vendor-Q141493895.html">Change Vision, Inc.</a></td>
+<td>Java virtual machine, Linux, macOS, Microsoft Windows</td><td><a href="Q2117885.html">Systems Modeling Language</a>, <a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q141678567.html">Astah SysML</a><br><small>in Astah</small></td>
+<td>SysML modeling tool for model-based systems engineering developed by Change Vision</td>
+<td>proprietary software, software</td>
+<td></td>
+<td><a href="vendor-Q141493895.html">Change Vision, Inc.</a></td>
+<td>macOS, Microsoft Windows</td><td><a href="Q2117885.html">Systems Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q141678568.html">Astah System Safety</a><br><small>in Astah</small></td>
+<td>MBSE and safety analysis software for safety-critical systems developed by Change Vision</td>
+<td>proprietary software, software</td>
+<td></td>
+<td><a href="vendor-Q141493895.html">Change Vision, Inc.</a></td>
+<td>macOS, Microsoft Windows</td><td><a href="Q2117885.html">Systems Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q2877357.html">BOUML</a></td>
+<td>open source UML diagram software</td>
+<td>free software</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q3265224.html">LucidChart</a></td>
+<td>web-based visual collaboration software</td>
+<td>diagramming software, mind mapping software, software as a service</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q624546.html">entity-relationship model</a></td>
+</tr>
+<tr>
+<td><a href="Q19648587.html">ProcessOn</a></td>
+<td>Online mind mapping and diagramming tool</td>
+<td>web application</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+<tr>
+<td><a href="Q1606279.html">Umbrello</a></td>
+<td>Unified Modelling Language (UML) diagram program</td>
+<td>UML tool</td>
+<td></td>
+<td></td>
+<td>Unix-like operating system</td><td><a href="Q169411.html">Unified Modeling Language</a>, <a href="Q548264.html">XML Metadata Interchange</a></td>
+</tr>
+<tr>
+<td><a href="Q21463722.html">UML Designer</a></td>
+<td></td>
+<td>free software</td>
+<td></td>
+<td></td>
+<td></td><td><a href="Q169411.html">Unified Modeling Language</a></td>
+</tr>
+</table>
+</div>
+<hr>
+<p>TODO · <a href="colophon.html">Colophon</a></p>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* mbse.cool on top of tiny-brutalism: theme colours (follows the OS light/dark setting) and
+ * spacing for the plain elements this site uses (tables, dl, blockquote), which the reset zeroes. */
+:root {
+    color-scheme: light dark;
+    --fg: #000;
+    --bg: #fff;
+    --muted: #808080;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg: #e8e8e8;
+        --bg: #111;
+        --muted: #9a9a9a;
+    }
+}
+
+html, body {
+    height: auto;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+a { color: var(--fg); }
+a:hover { color: var(--muted); }
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--fg);
+    margin: 1rem 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid var(--fg);
+    box-shadow: 4px 4px 0 var(--fg);
+    margin-bottom: 1.5rem;
+}
+th, td {
+    border: 1px solid var(--fg);
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+}
+th { font-weight: 700; }
+
+dl { margin-bottom: 1rem; }
+dt { font-weight: 700; }
+dd { margin: 0 0 0.5rem 2rem; }
+
+blockquote {
+    border: 2px solid var(--fg);
+    box-shadow: 4px 4px 0 var(--fg);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+h2 { margin-top: 2rem; }
+.pyramid {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto 2rem;
+}
+.pyramid .shadow { fill: var(--fg); }
+.pyramid .face, .pictogram .face {
+    fill: var(--bg);
+    stroke: var(--fg);
+    stroke-width: 2;
+    stroke-linejoin: round;
+}
+.pyramid text {
+    fill: var(--fg);
+    text-anchor: middle;
+    text-decoration: underline;
+}
+.pyramid text.center { font-weight: 700; }
+.pyramid a:hover .face, .pyramid a:focus-visible .face { fill: var(--fg); }
+.pyramid a:hover text, .pyramid a:focus-visible text { fill: var(--bg); }
+
+
+.pictogram {
+    height: 1em;
+    width: auto;
+    vertical-align: -0.1em;
+    margin-right: 0.6em;
+}
+.pictogram .face { stroke-width: 1.5; }
+.pictogram .face.on { fill: var(--fg); }
+
+/* Responsive: wide tables scroll inside their own box (padding keeps the shadow visible),
+ * long words and URLs wrap, headings shrink on narrow screens. */
+.scroll {
+    overflow-x: auto;
+    padding: 0 6px 6px 0;
+    margin-bottom: 1.5rem;
+}
+.scroll table { margin-bottom: 0; }
+td { overflow-wrap: break-word; }
+dd, p, li, blockquote { overflow-wrap: anywhere; }
+
+@media (max-width: 600px) {
+    body { padding: 0.75rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; }
+    th, td { padding: 0.3rem 0.4rem; }
+    dd { margin-left: 1rem; }
+    blockquote { padding: 0.75rem; }
+}
+
+/* Link previews (static/peek.js loads peek/<page>.html into this box) */
+.peek {
+    position: absolute;
+    z-index: 10;
+    max-width: 22rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg);
+    color: var(--fg);
+    border: 2px solid var(--fg);
+    box-shadow: 4px 4px 0 var(--fg);
+    font-size: 0.85rem;
+}
+.peek[hidden] { display: none; }
+.peek p { margin-bottom: 0.5rem; }
+.peek p:last-child { margin-bottom: 0; }
+.peek .pictogram { margin-right: 0.4em; }
+.peek-meta, .peek-credit { color: var(--muted); }
+.peek-credit { font-size: 0.75rem; }
