@@ -9,6 +9,12 @@
 <link rel="stylesheet" href="static/site.css">
 <script src="static/peek.js" defer></script>
 <title>Languages - mbse.cool</title>
+<link rel="canonical" href="https://mbse.cool/languages.html">
+<meta property="og:site_name" content="mbse.cool">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Languages">
+<meta property="og:url" content="https://mbse.cool/languages.html">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 <p><b><a href="index.html">mbse.cool</a></b>: <a href="languages.html">Languages</a> | <a href="methods.html">Methods</a> | <a href="tools.html">Tools</a> | <a href="vendors.html">Vendors</a></p>
@@ -23,13 +29,12 @@
 <p>TODO</p>
 <ul>
 <li><a href="#systems_design">Used in systems design</a> (2)</li>
-<li><a href="#modelling_languages">Modelling languages</a> (72)</li>
+<li><a href="#modelling_languages">Modelling languages</a> (74)</li>
 <li><a href="#architecture_description_languages">Architecture description languages</a> (3)</li>
-<li><a href="#omg_specifications">OMG specifications</a> (12)</li>
-<li><a href="#specification_languages">Specification languages</a> (85)</li>
+<li><a href="#omg_specifications">OMG specifications</a> (13)</li>
 </ul>
 <h2 id="systems_design">Used in systems design</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Used%20in%20systems%20design%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1941921%20%3B%0A%20%20%20%20%20%20%20%20%20%20wdt%3AP366%20wd%3AQ3750474%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<p>TODO <a href="https://query.wikidata.org/#%23%20Used%20in%20systems%20design%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1941921%20%3B%0A%20%20%20%20%20%20%20%20%20%20wdt%3AP366%20wd%3AQ3750474%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
 <div class="scroll">
 <table border="1" cellpadding="4">
 <tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
@@ -52,7 +57,7 @@
 </table>
 </div>
 <h2 id="modelling_languages">Modelling languages</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Modelling%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1941921%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<p>TODO <a href="https://query.wikidata.org/#%23%20Modelling%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1941921%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
 <div class="scroll">
 <table border="1" cellpadding="4">
 <tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
@@ -294,6 +299,14 @@
 <td>modeling language</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Q142129333.html">Kernel Modeling Language</a></td>
+<td>application-independent modeling language with a well-grounded formal semantics for modeling existing or planned systems</td>
+<td>modeling language</td>
+<td>2024</td>
+<td><a href="vendor-Q252733.html">Object Management Group</a></td>
 <td></td>
 </tr>
 <tr>
@@ -601,6 +614,14 @@
 <td></td>
 </tr>
 <tr>
+<td><a href="Q1967600.html">WebML</a></td>
+<td></td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="Q55872899.html">Wikidatan</a></td>
 <td>ontology language used by Wikidata</td>
 <td>ontology language</td>
@@ -635,7 +656,7 @@
 </table>
 </div>
 <h2 id="architecture_description_languages">Architecture description languages</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Architecture%20description%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ362356%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<p>TODO <a href="https://query.wikidata.org/#%23%20Architecture%20description%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ362356%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
 <div class="scroll">
 <table border="1" cellpadding="4">
 <tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
@@ -666,7 +687,7 @@
 </table>
 </div>
 <h2 id="omg_specifications">OMG specifications</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20OMG%20specifications%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP178%7Cwdt%3AP123%7Cwdt%3AP1056%20wd%3AQ252733%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<p>TODO <a href="https://query.wikidata.org/#%23%20OMG%20specifications%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP178%7Cwdt%3AP123%7Cwdt%3AP1056%20wd%3AQ252733%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
 <div class="scroll">
 <table border="1" cellpadding="4">
 <tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
@@ -707,6 +728,14 @@
 <td></td>
 <td>modeling language</td>
 <td>2004</td>
+<td><a href="vendor-Q252733.html">Object Management Group</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Q142129333.html">Kernel Modeling Language</a></td>
+<td>application-independent modeling language with a well-grounded formal semantics for modeling existing or planned systems</td>
+<td>modeling language</td>
+<td>2024</td>
 <td><a href="vendor-Q252733.html">Object Management Group</a></td>
 <td></td>
 </tr>
@@ -765,693 +794,6 @@
 <td></td>
 <td><a href="vendor-Q252733.html">Object Management Group</a></td>
 <td><a href="Q647784.html">ArgoUML</a>, <a href="Q1606279.html">Umbrello</a></td>
-</tr>
-</table>
-</div>
-<h2 id="specification_languages">Specification languages</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Specification%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1209840%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
-<div class="scroll">
-<table border="1" cellpadding="4">
-<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
-<tr>
-<td><a href="Q333301.html">Abstract Syntax Notation One</a></td>
-<td>interface description language for defining data structures that can be serialized and deserialized in a standard, cross-platform way</td>
-<td>data serialization format, interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q4733254.html">Alloy</a></td>
-<td>specification language</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q4653031.html">ANSI/ISO C Specification Language</a></td>
-<td>specification language</td>
-<td>specification language</td>
-<td>2008</td>
-<td><a href="vendor-Q868550.html">Alternative Energies and Atomic Energy Commission</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057453.html">API Blueprint</a></td>
-<td></td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q131925631.html">APIs.json</a></td>
-<td></td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q129177391.html">Arazzo Specification</a></td>
-<td>API specification format</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q4808749.html">Assertion Definition Language</a></td>
-<td>specification language providing a formal grammar to specify behaviour and interfaces for computer software</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q109424332.html">AsyncAPI Specification</a></td>
-<td>specification language for APIs</td>
-<td>interface description language, specification</td>
-<td>2017</td>
-<td><a href="vendor-Q131319370.html">AsyncAPI Initiative</a>, <a href="vendor-Q858851.html">Linux Foundation</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q105850009.html">Cap&#39;n Proto schema</a></td>
-<td>schema language</td>
-<td>file format, interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q5153278.html">Common Algebraic Specification Language</a></td>
-<td></td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q354124.html">DAML+OIL</a></td>
-<td></td>
-<td>interface description language, ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q5204255.html">DARPA agent markup language for services</a></td>
-<td>semantic markup language for describing web services and related ontologies</td>
-<td>interface description language, markup language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q19501726.html">E-LOTOS</a></td>
-<td>formal specification language</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q138033699.html">Easy Approach to Requirements Syntax</a></td>
-<td>structured method for writing natural language requirements</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q5478242.html">Franca IDL</a></td>
-<td>interface description language</td>
-<td>interface description language, software</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q5514515.html">GReAT</a></td>
-<td>Model Transformation Language</td>
-<td>model transformation language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057484.html">hRESTS</a></td>
-<td>microformat</td>
-<td>interface description language, microformats, RESTful API description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q17092270.html">IDL specification language</a></td>
-<td>the original IDL created by Lamb, Wulf and Nestor at Queen&#39;s University, Canada</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q6165002.html">Java Interface Definition Language</a></td>
-<td></td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q2517517.html">Java Modeling Language</a></td>
-<td>specification language for Java programs</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1805432.html">Language Of Temporal Ordering Specification</a></td>
-<td>formal specification language in computer science</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q6488779.html">Larch family</a></td>
-<td></td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q6714982.html">MCRL2</a></td>
-<td>formal specification language</td>
-<td>process calculus, specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q99443250.html">Microsoft Bond</a></td>
-<td>data serialization framework</td>
-<td>data serialization format, free software, interface description language</td>
-<td>2015</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q4044229.html">Microsoft Interface Definition Language</a></td>
-<td>extension of OMG IDL for supporting Microsoft&#39;s DCOM services</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057487.html">MicroWSMO</a></td>
-<td>semantic description of web API</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057492.html">Minimal Service Model</a></td>
-<td>description language for web services</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q6716796.html">MML</a></td>
-<td>specification language for telecommunications or network device</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1397689.html">Object Constraint Language</a></td>
-<td>declarative language</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7075046.html">Object Process Methodology</a></td>
-<td>modelling language and methodology for capturing knowledge and designing systems</td>
-<td>ISO standard, modeling language, ontology language, specification language</td>
-<td>1995</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1103955.html">Open Data Protocol</a></td>
-<td>open protocol which allows the creation and consumption of queryable and interoperable RESTful APIs in a simple and standard way</td>
-<td>computer network protocol, interface description language, RESTful API description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q18393146.html">OpenAPI</a></td>
-<td>specification language for APIs</td>
-<td>interface description language, specification</td>
-<td></td>
-<td><a href="vendor-Q858851.html">Linux Foundation</a>, <a href="vendor-Q63256596.html">OpenAPI Initiative</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q2553356.html">OWL-S</a></td>
-<td>ontology, defined using the Web Ontology Language (OWL), for describing Web Services. It was designed to enable software agents to automatically discover, invoke, compose, and monitor Web Services.</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q948666.html">Promela</a></td>
-<td>verification modeling language</td>
-<td>modeling language, specification language</td>
-<td></td>
-<td><a href="vendor-Q4588721.html">Gerard J. Holzmann</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1645574.html">Protocol Buffers</a></td>
-<td>data serialization format</td>
-<td>data serialization format, file format, free software, interface description language</td>
-<td>2001</td>
-<td><a href="vendor-Q95.html">Google</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q3408184.html">Prototype Verification System</a></td>
-<td>specification language integrated with support tools and an automated theorem prover</td>
-<td>proof assistant, specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q140761647.html">Quint</a></td>
-<td>executable specification language for distributed systems</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q5487742.html">RAISE</a></td>
-<td>acronym Rigorous Approach to Industrial Software Engineering</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057494.html">Resource-Oriented Service Model</a></td>
-<td>description language for web services</td>
-<td>interface description language, RESTful API description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057501.html">RESTdesc</a></td>
-<td>description language for web services</td>
-<td>interface description language, RESTful API description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q16909517.html">RESTful API Modeling Language</a></td>
-<td>YAML-based language for describing RESTful APIs</td>
-<td>data serialization format, markup language, RESTful API description language</td>
-<td>2013</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q16499884.html">RESTful Service Description Language</a></td>
-<td>XML description of HTTP-based web APIs</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7368680.html">Rosetta-lang</a></td>
-<td>system-level specification language</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057489.html">SA-REST</a></td>
-<td>description language for web services</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q5400393.html">SAWSDL</a></td>
-<td>a set of extension attributes for the Web Services Description Language (WSDL) and XML Schema definition language</td>
-<td>file format, interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29057455.html">Semantic Restful Interfaces</a></td>
-<td>description language for RESTful web services</td>
-<td>interface description language, RESTful API description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7391977.html">SOAP Service Description Language</a></td>
-<td>markup language</td>
-<td>file format, interface description language, markup language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q600637.html">specification and description language</a></td>
-<td>ITU-specified system description language</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q39069667.html">Swagger</a></td>
-<td>open-source framework to design, build, document, and consume RESTful Web APIs</td>
-<td>application software, interface description language, static HTTP API description language</td>
-<td></td>
-<td><a href="vendor-Q28406315.html">SmartBear Software</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7662832.html">Syntropy</a></td>
-<td>object-oriented analysis and software design method</td>
-<td>software, specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1291877.html">Tango</a></td>
-<td>user interface specification language</td>
-<td>specification language</td>
-<td>1989</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q118404490.html">Taxi</a></td>
-<td>description language for APIs, data models and relations between</td>
-<td>domain-specific language, interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q118405840.html">TypeSpec</a></td>
-<td>description language for APIs, code generation, documentation</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7894081.html">Universal Systems Language</a></td>
-<td>modeling language</td>
-<td>modeling language, specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q3552560.html">UsiXML</a></td>
-<td>markup language</td>
-<td>specification language, user interface markup language, XML-based format</td>
-<td>2004</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q507339.html">Web Application Description Language</a></td>
-<td>structured language used to describe Web applications</td>
-<td>interface description language, RESTful API description language, XML-based format</td>
-<td>2009</td>
-<td><a href="vendor-Q14647.html">Sun Microsystems</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7978451.html">Web IDL</a></td>
-<td>language used for web documents</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q623338.html">Web Services Description Language</a></td>
-<td>XML-based interface description language</td>
-<td>interface description language, XML-based format</td>
-<td></td>
-<td><a href="vendor-Q37033.html">World Wide Web Consortium</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q2553343.html">Web Services Modeling Language</a></td>
-<td>formal language</td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7978537.html">Web Services Semantics</a></td>
-<td></td>
-<td>interface description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1967600.html">WebML</a></td>
-<td></td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q7950624.html">WIDL</a></td>
-<td>Internet standard</td>
-<td>interface description language, XML-based format</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064554.html">WS-BaseFaults</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064516.html">WS-BaseNotification</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064522.html">WS-BrokeredNotification</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064586.html">WS-BusinessActivity</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064590.html">WS-CF</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064532.html">WS-Enumeration</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064528.html">WS-Eventing</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064576.html">WS-Fragment</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064582.html">WS-I Basic Security Profile</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064537.html">WS-MakeConnection</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064599.html">WS-Management Catalog</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1532169.html">WS-Notification</a></td>
-<td></td>
-<td>group, specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064542.html">WS-PolicyAttachment</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064550.html">WS-Resource</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064567.html">WS-ResourceLifetime</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064563.html">WS-ResourceProperties</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064603.html">WS-ResourceTransfer</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064546.html">WS-RM Policy Assertion</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064558.html">WS-ServiceGroup</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064519.html">WS-Topics</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1463488.html">WS-Transfer</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q29064595.html">WS-TXM</a></td>
-<td>web service specification</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Q1430781.html">Z notation</a></td>
-<td>formal specification language used for describing and modelling computing systems, standardized in ISO 13568</td>
-<td>specification language</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </table>
 </div>
