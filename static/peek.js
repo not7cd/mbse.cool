@@ -1,8 +1,10 @@
-// Link previews. Every page X.html has a prerendered HTML fragment at peek/X.html;
+// Link previews. Every page like languages/x.html has a prerendered HTML fragment at peek/languages/x.html;
 // after a short hover we load it and show it next to the link. Nothing is rendered here.
 (() => {
   if (matchMedia("(hover: none)").matches) return;
-  const DELAY = 1000, PAGE = /^(vendor-)?Q\d+\.html$/, cache = new Map();
+  const DELAY = 1000, PAGE = /^(languages|tools|methods|vendors)\/[a-z0-9-]+\.html$/, cache = new Map();
+  const ROOT = new URL("../", document.currentScript.src).href;  // this script is at static/peek.js
+  const page = (a) => a.href.startsWith(ROOT) && PAGE.test(a.href.slice(ROOT.length)) ? a.href.slice(ROOT.length) : null;
   const card = document.createElement("div");
   card.className = "peek"; card.id = "peek"; card.setAttribute("role", "tooltip"); card.hidden = true;
   document.body.append(card);
@@ -14,7 +16,7 @@
     card.hidden = true; link = null;
   };
   const show = async (a) => {
-    const url = "peek/" + a.getAttribute("href");
+    const url = ROOT + "peek/" + page(a);
     if (!cache.has(url)) cache.set(url, fetch(url).then(r => r.ok ? r.text() : null).catch(() => null));
     const html = await cache.get(url);
     if (!html || link !== a) return;
@@ -27,7 +29,7 @@
   };
   const enter = (e) => {
     const a = e.target.closest && e.target.closest("a[href]");
-    if (!a || !PAGE.test(a.getAttribute("href")) || a === link) return;
+    if (!a || !page(a) || a === link) return;
     hide(); link = a;
     timer = setTimeout(() => show(a), DELAY);
   };
