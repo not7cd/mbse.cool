@@ -50,11 +50,6 @@
 <td><a href="tools/creo-elements-pro.html">Creo Elements/Pro</a> <abbr class="badge" title="Microsoft Windows">WIN</abbr>, <a href="tools/creo-elements-view.html">Creo Elements/View</a> <abbr class="badge" title="Microsoft Windows">WIN</abbr></td>
 </tr>
 <tr>
-<td><a href="tools/delmia.html">DELMIA</a></td>
-<td><a href="vendors/dassault-systemes.html">Dassault Systèmes</a></td>
-<td><a href="tools/delmiaworks.html">DELMIAWorks</a></td>
-</tr>
-<tr>
 <td>IBM Rational</td>
 <td><a href="vendors/ibm.html">IBM</a></td>
 <td><a href="tools/ibm-rational-doors.html">IBM Rational DOORS</a>, <a href="tools/ibm-rational-rose-xde.html">IBM Rational Rose XDE</a>, <a href="tools/ibm-rational-software-architect.html">IBM Rational Software Architect</a>, <a href="tools/rational-rhapsody.html">Rational Rhapsody</a></td>
@@ -62,7 +57,7 @@
 <tr>
 <td>MATLAB &amp; Simulink</td>
 <td><a href="vendors/mathworks.html">MathWorks</a></td>
-<td><a href="tools/matlab.html">MATLAB</a> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge" title="macOS">MAC</abbr> <abbr class="badge" title="Linux">LIN</abbr> <abbr class="badge licence" title="Proprietary: proprietary license">PROP</abbr>, <a href="tools/matlab-q37805571.html">MATLAB</a>, <a href="tools/optimization-toolbox.html">Optimization Toolbox</a>, <a href="tools/polyspace.html">Polyspace</a>, <a href="tools/simulink.html">Simulink</a> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge" title="macOS">MAC</abbr> <abbr class="badge" title="Linux">LIN</abbr>, <a href="tools/stateflow.html">Stateflow</a></td>
+<td><a href="tools/matlab.html">MATLAB</a> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge" title="macOS">MAC</abbr> <abbr class="badge" title="Linux">LIN</abbr> <abbr class="badge licence" title="Proprietary: proprietary license">PROP</abbr>, <a href="tools/optimization-toolbox.html">Optimization Toolbox</a>, <a href="tools/polyspace.html">Polyspace</a>, <a href="tools/simulink.html">Simulink</a> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge" title="macOS">MAC</abbr> <abbr class="badge" title="Linux">LIN</abbr>, <a href="tools/stateflow.html">Stateflow</a></td>
 </tr>
 <tr>
 <td><a href="tools/simulia.html">SIMULIA</a></td>
@@ -73,12 +68,12 @@
 </div>
 <h2>All tools</h2>
 <ul>
-<li><a href="#mainline">Mainline vendors and tools</a> (39)</li>
+<li><a href="#mainline">Mainline vendors and tools</a> (33)</li>
 <li><a href="#uml_case_tools">UML and CASE tools</a> (28)</li>
 <li><a href="#linked_to_language">Linked to a modelling language</a> (9)</li>
 </ul>
 <h2 id="mainline">Mainline vendors and tools</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Mainline%20vendors%20and%20tools%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fdev%20%7B%20wd%3AQ1172038%20wd%3AQ1760641%20wd%3AQ15898201%20wd%3AQ295774%20wd%3AQ1518683%20wd%3AQ7573969%20wd%3AQ7044399%20wd%3AQ8075081%20wd%3AQ55637178%20wd%3AQ3058934%20%7D%0A%20%20%20%20%20%20%3Fitem%20wdt%3AP178%20%3Fdev%20.%0A%20%20%20%20%7D%20UNION%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fitem%20%7B%20wd%3AQ1977027%20wd%3AQ1154767%20wd%3AQ3420095%20wd%3AQ21965864%20wd%3AQ24027074%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ235557%20%7D%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
+<p>TODO <a href="https://query.wikidata.org/#%23%20Mainline%20vendors%20and%20tools%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fdev%20%7B%20wd%3AQ1172038%20wd%3AQ1760641%20wd%3AQ15898201%20wd%3AQ295774%20wd%3AQ1518683%20wd%3AQ7573969%20wd%3AQ7044399%20wd%3AQ8075081%20wd%3AQ55637178%20wd%3AQ3058934%20%7D%0A%20%20%20%20%20%20%3Fitem%20wdt%3AP178%20%3Fdev%20.%0A%20%20%20%20%20%20%23%20only%20software%3B%20a%20visual%20programming%20language%20%28Stateflow%29%20counts%20as%20a%20modelling%20tool%2C%0A%20%20%20%20%20%20%23%20a%20plain%20programming%20language%20%28the%20MATLAB%20language%20item%29%20does%20not%0A%20%20%20%20%20%20FILTER%20EXISTS%20%7B%20VALUES%20%3Fsw%20%7B%20wd%3AQ7397%20wd%3AQ683111%20%7D%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20%3Fsw%20.%20%7D%0A%20%20%20%20%20%20%23%20not%20from%20the%20vendors%27%20other%20businesses%3A%20typesetting%2C%20chemistry%2C%20ERP%2C%20graphics%20engines%0A%20%20%20%20%20%20MINUS%20%7B%20VALUES%20%3Fother%20%7B%20wd%3AQ15614005%20wd%3AQ4497736%20wd%3AQ28057030%20wd%3AQ355134%20%7D%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20%3Fother%20.%20%7D%0A%20%20%20%20%7D%20UNION%20%7B%0A%20%20%20%20%20%20VALUES%20%3Fitem%20%7B%20wd%3AQ1977027%20wd%3AQ1154767%20wd%3AQ3420095%20wd%3AQ21965864%20wd%3AQ24027074%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20MINUS%20%7B%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ235557%20%7D%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
 <div class="scroll">
 <table class="wide" border="1" cellpadding="4">
 <tr><th class="w-name">Name</th><th>Description</th><th class="w-kind">Instance of</th><th class="w-year">Since</th><th class="w-dev">Developer</th><th class="w-os">OS, licence</th><th class="w-links">Languages</th></tr>
@@ -89,14 +84,6 @@
 <td>1978</td>
 <td><a href="vendors/dassault-systemes.html">Dassault Systèmes</a></td>
 <td> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge licence" title="Proprietary: proprietary license">PROP</abbr></td><td></td>
-</tr>
-<tr>
-<td><a href="tools/biovia-discovery-studio.html">BIOVIA Discovery Studio</a></td>
-<td>molecular modeling software</td>
-<td>chemistry software</td>
-<td></td>
-<td><a href="vendors/dassault-systemes.html">Dassault Systèmes</a></td>
-<td> <abbr class="badge" title="Linux">LIN</abbr></td><td></td>
 </tr>
 <tr>
 <td><a href="tools/capella.html">Capella</a></td>
@@ -155,14 +142,6 @@
 <td> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge" title="Unix">UNIX</abbr></td><td></td>
 </tr>
 <tr>
-<td><a href="tools/delmiaworks.html">DELMIAWorks</a><br><small>in DELMIA</small></td>
-<td>Manufacturing ERP</td>
-<td>ERP software</td>
-<td>1989</td>
-<td><a href="vendors/dassault-systemes.html">Dassault Systèmes</a></td>
-<td></td><td></td>
-</tr>
-<tr>
 <td><a href="tools/draftsight.html">DraftSight</a></td>
 <td>CAD software used to create, edit, view, and markup 2D drawings and 3D design</td>
 <td>computer-aided design software, software</td>
@@ -201,14 +180,6 @@
 <td>2000</td>
 <td><a href="vendors/sparx-systems.html">Sparx Systems</a></td>
 <td> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge licence" title="Proprietary">PROP</abbr></td><td><a href="languages/unified-modeling-language.html">Unified Modeling Language</a></td>
-</tr>
-<tr>
-<td><a href="tools/geovia.html">GEOVIA</a></td>
-<td>Software for geological modeling and mining operations, brand of Dassault Systèmes</td>
-<td>brand, company, enterprise, software</td>
-<td>2012</td>
-<td><a href="vendors/dassault-systemes.html">Dassault Systèmes</a></td>
-<td></td><td></td>
 </tr>
 <tr>
 <td><a href="tools/i-deas.html">I-DEAS</a></td>
@@ -257,22 +228,6 @@
 <td>1984</td>
 <td><a href="vendors/cleve-moler.html">Cleve Moler</a>, <a href="vendors/mathworks.html">MathWorks</a></td>
 <td> <abbr class="badge" title="Microsoft Windows">WIN</abbr> <abbr class="badge" title="macOS">MAC</abbr> <abbr class="badge" title="Linux">LIN</abbr> <abbr class="badge licence" title="Proprietary: proprietary license">PROP</abbr></td><td></td>
-</tr>
-<tr>
-<td><a href="tools/matlab-q37805571.html">MATLAB</a><br><small>in MATLAB &amp; Simulink</small></td>
-<td>fourth-generation programming language</td>
-<td>array programming language, imperative programming language, interpreted language, programming language</td>
-<td>1970</td>
-<td><a href="vendors/mathworks.html">MathWorks</a></td>
-<td></td><td></td>
-</tr>
-<tr>
-<td><a href="tools/mks-toolkit.html">MKS Toolkit</a></td>
-<td>software package</td>
-<td>software</td>
-<td></td>
-<td><a href="vendors/mks-inc.html">MKS Inc.</a>, <a href="vendors/parametric-technology-corporation.html">Parametric Technology Corporation</a></td>
-<td></td><td></td>
 </tr>
 <tr>
 <td><a href="tools/nx.html">NX</a></td>
@@ -377,14 +332,6 @@
 <td></td>
 <td><a href="vendors/mathworks.html">MathWorks</a></td>
 <td></td><td></td>
-</tr>
-<tr>
-<td><a href="tools/virtools.html">Virtools</a></td>
-<td>graphics engine</td>
-<td>graphics engine</td>
-<td></td>
-<td><a href="vendors/dassault-systemes.html">Dassault Systèmes</a></td>
-<td> <abbr class="badge" title="Microsoft Windows">WIN</abbr></td><td></td>
 </tr>
 <tr>
 <td><a href="tools/windchill.html">Windchill</a></td>
