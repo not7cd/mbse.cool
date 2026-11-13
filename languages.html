@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="stylesheet" href="static/vendor/tiny-brutalism.css">
-<link rel="stylesheet" href="static/site.css">
-<script src="static/peek.js" defer></script>
+<link rel="stylesheet" href="static/vendor/tiny-brutalism.css?v=3f464dc6">
+<link rel="stylesheet" href="static/site.css?v=3f464dc6">
+<script src="static/peek.js?v=3f464dc6" defer></script>
 <link rel="icon" type="image/svg+xml" href="static/icon/languages.svg">
 <title>Languages - mbse.cool</title>
 <link rel="canonical" href="https://mbse.cool/languages.html">
@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary">
 </head>
 <body>
+<div class="construction"><div class="track"><span>site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// </span><span aria-hidden="true">site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// site under construction /// </span></div></div>
 <p><b><a href="index.html">mbse.cool</a></b>: <a href="languages.html">Languages</a> | <a href="methods.html">Methods</a> | <a href="tools.html">Tools</a> | <a href="vendors.html">Vendors</a></p>
 <hr>
 <h1><svg class="pictogram" width="60" height="52" viewBox="0 0 60 52" role="img" aria-label="Language">
@@ -28,41 +29,42 @@
 <polygon class="face" points="16,26 44,26 30,50"/>
 </svg>Languages</h1>
 <p>TODO</p>
-<ul>
-<li><a href="#systems_design">Used in systems design</a> (2)</li>
-<li><a href="#modelling_languages">Modelling languages</a> (74)</li>
-<li><a href="#architecture_description_languages">Architecture description languages</a> (3)</li>
-<li><a href="#omg_specifications">OMG specifications</a> (13)</li>
-</ul>
-<h2 id="systems_design">Used in systems design</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Used%20in%20systems%20design%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1941921%20%3B%0A%20%20%20%20%20%20%20%20%20%20wdt%3AP366%20wd%3AQ3750474%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
 <div class="scroll">
-<table border="1" cellpadding="4">
-<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
-<tr>
-<td><a href="languages/object-process-methodology.html">Object Process Methodology</a></td>
-<td>modelling language and methodology for capturing knowledge and designing systems</td>
-<td>ISO standard, modeling language, ontology language, specification language</td>
+<table class="wide" border="1" cellpadding="4">
+<tr><th class="w-name">Name</th><th>Description</th><th class="w-kind">Instance of</th><th class="w-year">Since</th><th class="w-dev">Developer</th><th class="w-num">Tools</th></tr>
+<tr id="Q169411">
+<td><a href="languages/unified-modeling-language.html">Unified Modeling Language</a></td>
+<td>software system design modeling tool</td>
+<td>academic discipline, data modeling language, field of study</td>
 <td>1995</td>
-<td></td>
-<td></td>
+<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
+<td>24</td>
 </tr>
-<tr>
+<tr id="Q2117885">
 <td><a href="languages/systems-modeling-language.html">Systems Modeling Language</a></td>
 <td>general-purpose modeling language for systems engineering applications</td>
 <td>modeling language</td>
 <td></td>
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td><a href="tools/astah.html">Astah</a>, <a href="tools/astah-sysml.html">Astah SysML</a>, <a href="tools/astah-system-safety.html">Astah System Safety</a></td>
+<td>3</td>
 </tr>
-</table>
-</div>
-<h2 id="modelling_languages">Modelling languages</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Modelling%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ1941921%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
-<div class="scroll">
-<table border="1" cellpadding="4">
-<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
-<tr>
+<tr id="Q548264">
+<td><a href="languages/xml-metadata-interchange.html">XML Metadata Interchange</a></td>
+<td>Object Management Group standard</td>
+<td>file format</td>
+<td></td>
+<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
+<td>2</td>
+</tr>
+<tr id="Q624546">
+<td><a href="languages/entity-relationship-model.html">entity-relationship model</a></td>
+<td>describes inter-related things of interest in a specific domain of knowledge;composed of entity types (which classify the things of interest) and specifies relationships that can exist between instances of those entity types</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+<tr id="Q4655515">
 <td><a href="languages/a-block-diagram-language.html">A Block diagram Language</a></td>
 <td>hardware description language</td>
 <td>hardware description language</td>
@@ -70,7 +72,7 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q379390">
 <td><a href="languages/advanced-boolean-expression-language.html">Advanced Boolean Expression Language</a></td>
 <td>obsolete hardware description language, in computer engineering</td>
 <td>hardware description language</td>
@@ -78,7 +80,7 @@
 <td><a href="vendors/data-i-o.html">Data I/O</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q1077796">
 <td><a href="languages/archimate.html">ArchiMate</a></td>
 <td>Enterprise architecture modeling language</td>
 <td>modeling language</td>
@@ -86,582 +88,7 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td><a href="languages/boundary-scan-description-language.html">Boundary scan description language</a></td>
-<td>description language for electronics testing</td>
-<td>hardware description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/business-process-definition-metamodel.html">Business Process Definition Metamodel</a></td>
-<td>Object Management Group metamodel for defining business processes</td>
-<td>meta-modeling, modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/chisel.html">Chisel</a></td>
-<td>open-source hardware description language (HDL)</td>
-<td>domain-specific language, hardware description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/cmmn.html">CMMN</a></td>
-<td>graphical representation</td>
-<td>model, modeling language, notation</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/cupl.html">CUPL</a></td>
-<td>Hardware description language</td>
-<td>hardware description language, software</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/cycl.html">CycL</a></td>
-<td>ontology language used by Doug Lenat&#39;s Cyc artificial intelligence project</td>
-<td>ontology language, programming language</td>
-<td>1984</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/daml-oil.html">DAML+OIL</a></td>
-<td></td>
-<td>interface description language, ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/dolfin.html">Dolfin</a></td>
-<td>ontology language for defining concepts, properties and inference rules</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/e.html">e</a></td>
-<td>hardware verification language</td>
-<td>hardware verification language</td>
-<td>1992</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/ella.html">ELLA</a></td>
-<td>programming language</td>
-<td>hardware description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/energy-systems-language.html">Energy Systems Language</a></td>
-<td>Modeling language used in energy flow diagrams</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/enhanced-entityrelationship-model.html">enhanced entity–relationship model</a></td>
-<td>enhancement of the ER model that describes inter-related things of interest in a specific domain of knowledge with subclass / inheritance support</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/entity-relationship-model.html">entity-relationship model</a></td>
-<td>describes inter-related things of interest in a specific domain of knowledge;composed of entity types (which classify the things of interest) and specifies relationships that can exist between instances of those entity types</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td><a href="tools/lucidchart.html">LucidChart</a></td>
-</tr>
-<tr>
-<td><a href="languages/event-driven-process-chain.html">event-driven process chain</a></td>
-<td>graphical modeling language for representing an organization&#39;s business processes</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/express.html">EXPRESS</a></td>
-<td>standard data modeling language for product data</td>
-<td>data modeling language, ISO standard</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/f-logic.html">F-logic</a></td>
-<td>knowledge representation and ontology language</td>
-<td>field of study, ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/field-modeling-language.html">Field Modeling Language</a></td>
-<td>formal language for describing mathematical aspects of specific scientific models</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/fo.html">FO(.)</a></td>
-<td>knowledge representation computer programming language</td>
-<td>frame language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/gellish.html">Gellish</a></td>
-<td>formal language</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/gezel.html">Gezel</a></td>
-<td></td>
-<td>hardware description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/goal-oriented-requirements-language.html">Goal-oriented Requirements Language</a></td>
-<td>The Goal-oriented Requirements Language visually describes the non-functional requirements of a software system.</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/human-usable-textual-notation.html">Human-Usable Textual Notation</a></td>
-<td></td>
-<td>modeling language</td>
-<td>2004</td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/i.html">i*</a></td>
-<td>modeling language suitable for an early phase of system modeling</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/idef.html">IDEF</a></td>
-<td>family of modeling languages for systems and software engineering, for functional modeling to data, simulation, object-oriented analysis and design, and knowledge acquisition</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/ifps.html">IFPS</a></td>
-<td>modeling language</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/interaction-flow-modeling-language.html">Interaction Flow Modeling Language</a></td>
-<td>visual modeling language for designing user interactions and user interfaces of software applications. A standard issued by the OMG (Object Management Group)</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/kaos.html">KAOS</a></td>
-<td>KAOS is a goal-oriented software requirements capturing approach in requirements engineering</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/kernel-modeling-language.html">Kernel Modeling Language</a></td>
-<td>application-independent modeling language with a well-grounded formal semantics for modeling existing or planned systems</td>
-<td>modeling language</td>
-<td>2024</td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/knowledge-interchange-format.html">Knowledge Interchange Format</a></td>
-<td>computer-oriented language for the interchange of knowledge among disparate computer programs</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/krl.html">KRL</a></td>
-<td>knowledge representation language</td>
-<td>frame language, programming language</td>
-<td>1971</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/lingo.html">LINGO</a></td>
-<td>mathematical modeling language</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/linkml.html">LinkML</a></td>
-<td>flexible modeling framework that allow for working with semantic web standards alongside a modern data stack</td>
-<td>interchange format, ontology language, semantic web software, software, technical standard</td>
-<td>2021</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/modeling-with-object-types-mot.html">Modeling with Object Types (MOT)</a></td>
-<td></td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/myhdl.html">MyHDL</a></td>
-<td>Python based hardware description language</td>
-<td>hardware description language, implementation of a programming language, open-source software, software project</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/object-process-methodology.html">Object Process Methodology</a></td>
-<td>modelling language and methodology for capturing knowledge and designing systems</td>
-<td>ISO standard, modeling language, ontology language, specification language</td>
-<td>1995</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/objectrole-modeling.html">object–role modeling</a></td>
-<td>programming technique</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/ontological-modeling-language.html">Ontological Modeling Language</a></td>
-<td>ontology language for systems engineering vocabularies, based on OWL2 and SWRL</td>
-<td>data modeling language, ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/owl-dl.html">OWL DL</a></td>
-<td>ontology language</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/owl-full.html">OWL Full</a></td>
-<td>ontology language</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/owl-lite.html">OWL Lite</a></td>
-<td>ontology language</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/owl-rl.html">OWL RL</a></td>
-<td>profile of the OWL ontology standard</td>
-<td>ontology language, W3C Recommendation</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/palasm.html">PALASM</a></td>
-<td>hardware description language</td>
-<td>hardware description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/petri-net.html">Petri net</a></td>
-<td>family of modelling languages for distributed systems</td>
-<td>abstract machine, modeling language</td>
-<td>1960</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/promela.html">Promela</a></td>
-<td>verification modeling language</td>
-<td>modeling language, specification language</td>
-<td></td>
-<td><a href="vendors/gerard-j-holzmann.html">Gerard J. Holzmann</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/publicodes.html">Publicodes</a></td>
-<td>Declarative language for modeling complex business domains</td>
-<td>free software, modeling language, programming language</td>
-<td>2017</td>
-<td><a href="vendors/central-agency-of-social-security-organisations.html">Central Agency of Social Security Organisations</a>, <a href="vendors/q64876974.html">Q64876974</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/r2ml.html">R2ML</a></td>
-<td>Markup Language</td>
-<td>markup language, ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/reasonable-ontology-templates-ottr.html">Reasonable Ontology Templates (OTTR)</a></td>
-<td>ontology template language and framework for representing and instantiating RDF and OWL modeling patterns</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/rebeca-modeling-language.html">Rebeca Modeling Language</a></td>
-<td>actor-based programming language</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/ruby.html">Ruby</a></td>
-<td>functional programming language targeting relational algebra and used as a hardware description language</td>
-<td>functional programming language, hardware description language</td>
-<td>1986</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/samm-semantic-aspect-meta-model.html">SAMM (Semantic Aspect Meta Model)</a></td>
-<td>RDF/Turtle-based modeling language for defining Catena-X Aspect Models, governed by the Eclipse Foundation</td>
-<td>ontology language</td>
-<td></td>
-<td><a href="vendors/eclipse-foundation.html">Eclipse Foundation</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/semantics-of-business-vocabulary-and-business-rules.html">Semantics of Business Vocabulary and Business Rules</a></td>
-<td>standard of Object Management Group</td>
-<td>controlled language, ontology language</td>
-<td>2003</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/soaml.html">SoaML</a></td>
-<td></td>
-<td>modeling language</td>
-<td></td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/specc.html">SpecC</a></td>
-<td>System Description Language</td>
-<td>hardware description language</td>
-<td>2001</td>
-<td><a href="vendors/daniel-gajski.html">Daniel Gajski</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/spinalhdl.html">SpinalHDL</a></td>
-<td>hardware description language</td>
-<td>compiler, domain-specific language, hardware description language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/structured-entity-relationship-model.html">Structured Entity Relationship Model</a></td>
-<td></td>
-<td>modeling language</td>
-<td>1988</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/structured-function-description-language.html">Structured Function Description Language</a></td>
-<td>Hardware description language</td>
-<td>hardware description language, modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/systems-modeling-language.html">Systems Modeling Language</a></td>
-<td>general-purpose modeling language for systems engineering applications</td>
-<td>modeling language</td>
-<td></td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td><a href="tools/astah.html">Astah</a>, <a href="tools/astah-sysml.html">Astah SysML</a>, <a href="tools/astah-system-safety.html">Astah System Safety</a></td>
-</tr>
-<tr>
-<td><a href="languages/systemverilog.html">SystemVerilog</a></td>
-<td>hardware description and hardware verification language</td>
-<td>hardware description language, hardware verification language, programming language</td>
-<td>2002</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/turtle.html">Turtle</a></td>
-<td>format for expressing data in the RDF data model</td>
-<td>data serialization format, field of study, file format, ontology language, W3C Recommendation</td>
-<td>2003</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/unified-modeling-language.html">Unified Modeling Language</a></td>
-<td>software system design modeling tool</td>
-<td>academic discipline, data modeling language, field of study</td>
-<td>1995</td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td><a href="tools/argouml.html">ArgoUML</a>, <a href="tools/astah.html">Astah</a>, <a href="tools/bouml.html">BOUML</a>, <a href="tools/enterprise-architect.html">Enterprise Architect</a>, <a href="tools/gaphor.html">Gaphor</a>, <a href="tools/ibm-rational-rose-xde.html">IBM Rational Rose XDE</a>, <a href="tools/jetuml.html">JetUML</a>, <a href="tools/magicdraw.html">MagicDraw</a>, <a href="tools/microsoft-visual-modeler.html">Microsoft Visual Modeler</a>, <a href="tools/modelio.html">Modelio</a>, <a href="tools/nclass.html">NClass</a>, <a href="tools/papyrus.html">Papyrus</a>, <a href="tools/plantuml.html">PlantUML</a>, <a href="tools/poseidon-for-uml.html">Poseidon for UML</a>, <a href="tools/processon.html">ProcessOn</a>, <a href="tools/rational-rhapsody.html">Rational Rhapsody</a>, <a href="tools/software-ideas-modeler.html">Software Ideas Modeler</a>, <a href="tools/staruml.html">StarUML</a>, <a href="tools/together.html">Together</a>, <a href="tools/umbrello.html">Umbrello</a>, <a href="tools/uml-designer.html">UML Designer</a>, <a href="tools/uml-node.html">UML node</a>, <a href="tools/umlet.html">UMLet</a>, <a href="tools/umodel.html">UModel</a></td>
-</tr>
-<tr>
-<td><a href="languages/universal-systems-language.html">Universal Systems Language</a></td>
-<td>modeling language</td>
-<td>modeling language, specification language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/use-case-map.html">Use Case Map</a></td>
-<td>Use case maps visually describe the functional requirements for a software system.</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/verilog.html">Verilog</a></td>
-<td>hardware description language</td>
-<td>hardware description language, modeling language</td>
-<td>1984</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/vhdl.html">VHDL</a></td>
-<td>Hardware Description Language</td>
-<td>hardware description language, modeling language</td>
-<td>1983</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/web-ontology-language.html">Web Ontology Language</a></td>
-<td>family of knowledge representation languages</td>
-<td>file format, ontology language, W3C Recommendation</td>
-<td>2004</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/web-rule-language.html">Web Rule Language</a></td>
-<td>rule-based ontology language</td>
-<td>file format family, ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/webml.html">WebML</a></td>
-<td>visual modeling language for data-intensive web applications</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/wikidatan.html">Wikidatan</a></td>
-<td>ontology language used by Wikidata</td>
-<td>ontology language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/xilinx-netlist-format.html">Xilinx Netlist Format</a></td>
-<td>hardware description language by Xilinx</td>
-<td>hardware description language</td>
-<td></td>
-<td><a href="vendors/xilinx.html">Xilinx</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/yang.html">YANG</a></td>
-<td>data modeling language</td>
-<td>data modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/zx-calculus.html">ZX-calculus</a></td>
-<td>graphical language for quantum processes</td>
-<td>modeling language</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-</div>
-<h2 id="architecture_description_languages">Architecture description languages</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20Architecture%20description%20languages%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP31/wdt%3AP279%2A%20wd%3AQ362356%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
-<div class="scroll">
-<table border="1" cellpadding="4">
-<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
-<tr>
+<tr id="Q2860281">
 <td><a href="languages/architecture-analysis-and-design-language.html">architecture analysis and design language</a></td>
 <td>architecture description language</td>
 <td>architecture description language</td>
@@ -669,30 +96,23 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td><a href="languages/dually.html">DUALLy</a></td>
-<td>architecture description language</td>
-<td>architecture description language</td>
-<td></td>
-<td><a href="vendors/university-of-l-aquila.html">University of L&#39;Aquila</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="languages/east-adl.html">EAST-ADL</a></td>
-<td></td>
-<td>architecture description language</td>
+<tr id="Q829457">
+<td><a href="languages/boundary-scan-description-language.html">Boundary scan description language</a></td>
+<td>description language for electronics testing</td>
+<td>hardware description language</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-</table>
-</div>
-<h2 id="omg_specifications">OMG specifications</h2>
-<p>TODO <a href="https://query.wikidata.org/#%23%20OMG%20specifications%0ASELECT%20%3Fitem%0A%20%20%20%20%20%20%20%28SAMPLE%28%3FlabelEn%29%20AS%20%3Flabel_en%29%20%28SAMPLE%28%3FlabelMul%29%20AS%20%3Flabel_mul%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fdesc%29%20AS%20%3Fdescription%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Fwebsite%29%20AS%20%3Fsite%29%0A%20%20%20%20%20%20%20%28SAMPLE%28%3Farticle%29%20AS%20%3Fwikipedia%29%0A%20%20%20%20%20%20%20%28MIN%28%3Finception%29%20AS%20%3Ffounded%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fdeveloper%3B%20separator%3D%22%7C%22%29%20AS%20%3Fdevelopers%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FkindLabel%3B%20separator%3D%22%7C%22%29%20AS%20%3Fkinds%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3Frel%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FrelViaClass%3B%20separator%3D%22%7C%22%29%20AS%20%3Frelated_via_class%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacesPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaces%29%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FreplacedByPair%3B%20separator%3D%22%7C%22%29%20AS%20%3Freplaced_by%29%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%3Fitem%20wdt%3AP178%7Cwdt%3AP123%7Cwdt%3AP1056%20wd%3AQ252733%20.%0A%20%20%7D%0A%7D%20AS%20%25items%0AWHERE%20%7B%0A%20%20INCLUDE%20%25items%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelEn%20.%20FILTER%28LANG%28%3FlabelEn%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FlabelMul%20.%20FILTER%28LANG%28%3FlabelMul%29%20%3D%20%22mul%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20schema%3Adescription%20%3Fdesc%20.%20FILTER%28LANG%28%3Fdesc%29%20%3D%20%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP856%20%3Fwebsite%20%7D%0A%20%20OPTIONAL%20%7B%20%3Farticle%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AisPartOf%20%3Chttps%3A//en.wikipedia.org/%3E%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Finception%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP178%20%3Fdeveloper%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31%20%3Fkind%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fkind%20rdfs%3Alabel%20%3FkindLabel%20.%20FILTER%28LANG%28%3FkindLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%23%20uses%20/%20has%20use%20/%20readable%20file%20format%20/%20writable%20file%20format%2C%0A%20%20%23%20optionally%20through%20an%20activity%20that%20uses%20something%20%28has%20use%20%22UML%20modeling%22%2C%20which%20uses%20UML%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20%28wdt%3AP2283%7Cwdt%3AP366%7Cwdt%3AP1072%7Cwdt%3AP1073%29/wdt%3AP2283%3F%20%3Frel%20%7D%0A%20%20%23%20the%20same%2C%20stated%20on%20the%20item%27s%20class%20%28instance%20of%20%22UML%20tool%22%2C%20which%20has%20use%20%22UML%20modeling%22%29%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP31/%28wdt%3AP2283%7Cwdt%3AP366%29/wdt%3AP2283%3F%20%3FrelViaClass%20%7D%0A%20%20%23%20replaces%20%28P1365%29%20/%20replaced%20by%20%28P1366%29%2C%20as%20%22%3Citem%20IRI%3E%09%3CEnglish%20label%3E%22%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1365%20%3Frp%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frp%20rdfs%3Alabel%20%3FrpLabel%20.%20FILTER%28LANG%28%3FrpLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frp%29%2C%20%22%09%22%2C%20COALESCE%28%3FrpLabel%2C%20%22%22%29%29%20AS%20%3FreplacesPair%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP1366%20%3Frb%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%20%7B%20%3Frb%20rdfs%3Alabel%20%3FrbLabel%20.%20FILTER%28LANG%28%3FrbLabel%29%20%3D%20%22en%22%29%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28CONCAT%28STR%28%3Frb%29%2C%20%22%09%22%2C%20COALESCE%28%3FrbLabel%2C%20%22%22%29%29%20AS%20%3FreplacedByPair%29%20%7D%0A%7D%0AGROUP%20BY%20%3Fitem%0A">Query</a>.</p>
-<div class="scroll">
-<table border="1" cellpadding="4">
-<tr><th>Name</th><th>Description</th><th>Instance of</th><th>Since</th><th>Developer</th><th>Tools</th></tr>
-<tr>
+<tr id="Q2928743">
+<td><a href="languages/business-process-definition-metamodel.html">Business Process Definition Metamodel</a></td>
+<td>Object Management Group metamodel for defining business processes</td>
+<td>meta-modeling, modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1017605">
 <td><a href="languages/business-process-model-and-notation.html">Business Process Model and Notation</a></td>
 <td>graphical representation for specifying business processes</td>
 <td>notation</td>
@@ -700,7 +120,23 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q97357731">
+<td><a href="languages/chisel.html">Chisel</a></td>
+<td>open-source hardware description language (HDL)</td>
+<td>domain-specific language, hardware description language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q24589648">
+<td><a href="languages/cmmn.html">CMMN</a></td>
+<td>graphical representation</td>
+<td>model, modeling language, notation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q141748228">
 <td><a href="languages/commons-ontology-library.html">Commons Ontology Library</a></td>
 <td></td>
 <td>mid-level ontology, ontology suite</td>
@@ -708,7 +144,87 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q12360486">
+<td><a href="languages/cupl.html">CUPL</a></td>
+<td>Hardware description language</td>
+<td>hardware description language, software</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q3890214">
+<td><a href="languages/cycl.html">CycL</a></td>
+<td>ontology language used by Doug Lenat&#39;s Cyc artificial intelligence project</td>
+<td>ontology language, programming language</td>
+<td>1984</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q354124">
+<td><a href="languages/daml-oil.html">DAML+OIL</a></td>
+<td></td>
+<td>interface description language, ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q141917288">
+<td><a href="languages/dolfin.html">Dolfin</a></td>
+<td>ontology language for defining concepts, properties and inference rules</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q5206279">
+<td><a href="languages/dually.html">DUALLy</a></td>
+<td>architecture description language</td>
+<td>architecture description language</td>
+<td></td>
+<td><a href="vendors/university-of-l-aquila.html">University of L&#39;Aquila</a></td>
+<td></td>
+</tr>
+<tr id="Q5324777">
+<td><a href="languages/e.html">e</a></td>
+<td>hardware verification language</td>
+<td>hardware verification language</td>
+<td>1992</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1326147">
+<td><a href="languages/east-adl.html">EAST-ADL</a></td>
+<td></td>
+<td>architecture description language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q5323297">
+<td><a href="languages/ella.html">ELLA</a></td>
+<td>programming language</td>
+<td>hardware description language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q5376991">
+<td><a href="languages/energy-systems-language.html">Energy Systems Language</a></td>
+<td>Modeling language used in energy flow diagrams</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q5378800">
+<td><a href="languages/enhanced-entityrelationship-model.html">enhanced entity–relationship model</a></td>
+<td>enhancement of the ER model that describes inter-related things of interest in a specific domain of knowledge with subclass / inheritance support</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q124511945">
 <td><a href="languages/essence.html">Essence</a></td>
 <td>framework for describing essential elements of software engineering practices</td>
 <td>meta-process modeling, notation, software development methodology</td>
@@ -716,7 +232,39 @@
 <td><a href="vendors/semat.html">SEMAT</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q351041">
+<td><a href="languages/event-driven-process-chain.html">event-driven process chain</a></td>
+<td>graphical modeling language for representing an organization&#39;s business processes</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q3062272">
+<td><a href="languages/express.html">EXPRESS</a></td>
+<td>standard data modeling language for product data</td>
+<td>data modeling language, ISO standard</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1266004">
+<td><a href="languages/f-logic.html">F-logic</a></td>
+<td>knowledge representation and ontology language</td>
+<td>field of study, ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q125162097">
+<td><a href="languages/field-modeling-language.html">Field Modeling Language</a></td>
+<td>formal language for describing mathematical aspects of specific scientific models</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q140909448">
 <td><a href="languages/financial-industry-business-ontology.html">Financial Industry Business Ontology</a></td>
 <td>OWL/RDF ontology defining the terms and relationships of the financial industry, jointly developed by the EDM Council and Object Management Group</td>
 <td>domain ontology, mid-level ontology, ontology suite, upper ontology</td>
@@ -724,7 +272,39 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q110921241">
+<td><a href="languages/fo.html">FO(.)</a></td>
+<td>knowledge representation computer programming language</td>
+<td>frame language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q2648698">
+<td><a href="languages/gellish.html">Gellish</a></td>
+<td>formal language</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q5555063">
+<td><a href="languages/gezel.html">Gezel</a></td>
+<td></td>
+<td>hardware description language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q113461175">
+<td><a href="languages/goal-oriented-requirements-language.html">Goal-oriented Requirements Language</a></td>
+<td>The Goal-oriented Requirements Language visually describes the non-functional requirements of a software system.</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1636498">
 <td><a href="languages/human-usable-textual-notation.html">Human-Usable Textual Notation</a></td>
 <td></td>
 <td>modeling language</td>
@@ -732,7 +312,47 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q5967387">
+<td><a href="languages/i.html">i*</a></td>
+<td>modeling language suitable for an early phase of system modeling</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1515863">
+<td><a href="languages/idef.html">IDEF</a></td>
+<td>family of modeling languages for systems and software engineering, for functional modeling to data, simulation, object-oriented analysis and design, and knowledge acquisition</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q5970836">
+<td><a href="languages/ifps.html">IFPS</a></td>
+<td>modeling language</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q14526138">
+<td><a href="languages/interaction-flow-modeling-language.html">Interaction Flow Modeling Language</a></td>
+<td>visual modeling language for designing user interactions and user interfaces of software applications. A standard issued by the OMG (Object Management Group)</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q6325199">
+<td><a href="languages/kaos.html">KAOS</a></td>
+<td>KAOS is a goal-oriented software requirements capturing approach in requirements engineering</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q142129333">
 <td><a href="languages/kernel-modeling-language.html">Kernel Modeling Language</a></td>
 <td>application-independent modeling language with a well-grounded formal semantics for modeling existing or planned systems</td>
 <td>modeling language</td>
@@ -740,7 +360,23 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q354163">
+<td><a href="languages/knowledge-interchange-format.html">Knowledge Interchange Format</a></td>
+<td>computer-oriented language for the interchange of knowledge among disparate computer programs</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q6336852">
+<td><a href="languages/krl.html">KRL</a></td>
+<td>knowledge representation language</td>
+<td>frame language, programming language</td>
+<td>1971</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q141769231">
 <td><a href="languages/languages-countries-and-codes-lcc-specification.html">Languages, Countries and Codes (LCC) Specification</a></td>
 <td>ontology suite</td>
 <td>core ontology</td>
@@ -748,7 +384,151 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q20708137">
+<td><a href="languages/lingo.html">LINGO</a></td>
+<td>mathematical modeling language</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q108911530">
+<td><a href="languages/linkml.html">LinkML</a></td>
+<td>flexible modeling framework that allow for working with semantic web standards alongside a modern data stack</td>
+<td>interchange format, ontology language, semantic web software, software, technical standard</td>
+<td>2021</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q16664896">
+<td><a href="languages/modeling-with-object-types-mot.html">Modeling with Object Types (MOT)</a></td>
+<td></td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q6944826">
+<td><a href="languages/myhdl.html">MyHDL</a></td>
+<td>Python based hardware description language</td>
+<td>hardware description language, implementation of a programming language, open-source software, software project</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q7075046">
+<td><a href="languages/object-process-methodology.html">Object Process Methodology</a></td>
+<td>modelling language and methodology for capturing knowledge and designing systems</td>
+<td>ISO standard, modeling language, ontology language, specification language</td>
+<td>1995</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1694402">
+<td><a href="languages/objectrole-modeling.html">object–role modeling</a></td>
+<td>programming technique</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q137178031">
+<td><a href="languages/ontological-modeling-language.html">Ontological Modeling Language</a></td>
+<td>ontology language for systems engineering vocabularies, based on OWL2 and SWRL</td>
+<td>data modeling language, ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q123414430">
+<td><a href="languages/owl-dl.html">OWL DL</a></td>
+<td>ontology language</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q123414431">
+<td><a href="languages/owl-full.html">OWL Full</a></td>
+<td>ontology language</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q123414421">
+<td><a href="languages/owl-lite.html">OWL Lite</a></td>
+<td>ontology language</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q120969821">
+<td><a href="languages/owl-rl.html">OWL RL</a></td>
+<td>profile of the OWL ontology standard</td>
+<td>ontology language, W3C Recommendation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q3740564">
+<td><a href="languages/palasm.html">PALASM</a></td>
+<td>hardware description language</td>
+<td>hardware description language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q724168">
+<td><a href="languages/petri-net.html">Petri net</a></td>
+<td>family of modelling languages for distributed systems</td>
+<td>abstract machine, modeling language</td>
+<td>1960</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q948666">
+<td><a href="languages/promela.html">Promela</a></td>
+<td>verification modeling language</td>
+<td>modeling language, specification language</td>
+<td></td>
+<td><a href="vendors/gerard-j-holzmann.html">Gerard J. Holzmann</a></td>
+<td></td>
+</tr>
+<tr id="Q111974596">
+<td><a href="languages/publicodes.html">Publicodes</a></td>
+<td>Declarative language for modeling complex business domains</td>
+<td>free software, modeling language, programming language</td>
+<td>2017</td>
+<td><a href="vendors/central-agency-of-social-security-organisations.html">Central Agency of Social Security Organisations</a>, <a href="vendors/q64876974.html">Q64876974</a></td>
+<td></td>
+</tr>
+<tr id="Q7274488">
+<td><a href="languages/r2ml.html">R2ML</a></td>
+<td>Markup Language</td>
+<td>markup language, ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q140685864">
+<td><a href="languages/reasonable-ontology-templates-ottr.html">Reasonable Ontology Templates (OTTR)</a></td>
+<td>ontology template language and framework for representing and instantiating RDF and OWL modeling patterns</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q7301633">
+<td><a href="languages/rebeca-modeling-language.html">Rebeca Modeling Language</a></td>
+<td>actor-based programming language</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q2145498">
 <td><a href="languages/requirements-interchange-format.html">Requirements Interchange Format</a></td>
 <td>XML file format used to exchange requirements and associated metadata between software tools from different vendors</td>
 <td>file format</td>
@@ -756,7 +536,31 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q7376262">
+<td><a href="languages/ruby.html">Ruby</a></td>
+<td>functional programming language targeting relational algebra and used as a hardware description language</td>
+<td>functional programming language, hardware description language</td>
+<td>1986</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q140523058">
+<td><a href="languages/samm-semantic-aspect-meta-model.html">SAMM (Semantic Aspect Meta Model)</a></td>
+<td>RDF/Turtle-based modeling language for defining Catena-X Aspect Models, governed by the Eclipse Foundation</td>
+<td>ontology language</td>
+<td></td>
+<td><a href="vendors/eclipse-foundation.html">Eclipse Foundation</a></td>
+<td></td>
+</tr>
+<tr id="Q7449106">
+<td><a href="languages/semantics-of-business-vocabulary-and-business-rules.html">Semantics of Business Vocabulary and Business Rules</a></td>
+<td>standard of Object Management Group</td>
+<td>controlled language, ontology language</td>
+<td>2003</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1647827">
 <td><a href="languages/soaml.html">SoaML</a></td>
 <td></td>
 <td>modeling language</td>
@@ -764,7 +568,7 @@
 <td><a href="vendors/object-management-group.html">Object Management Group</a></td>
 <td></td>
 </tr>
-<tr>
+<tr id="Q125252856">
 <td><a href="languages/software-process-engineering-metamodel.html">Software Process Engineering Metamodel</a></td>
 <td>software modelling standard</td>
 <td>meta-process modeling</td>
@@ -772,33 +576,145 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td><a href="languages/systems-modeling-language.html">Systems Modeling Language</a></td>
-<td>general-purpose modeling language for systems engineering applications</td>
+<tr id="Q7574418">
+<td><a href="languages/specc.html">SpecC</a></td>
+<td>System Description Language</td>
+<td>hardware description language</td>
+<td>2001</td>
+<td><a href="vendors/daniel-gajski.html">Daniel Gajski</a></td>
+<td></td>
+</tr>
+<tr id="Q111988692">
+<td><a href="languages/spinalhdl.html">SpinalHDL</a></td>
+<td>hardware description language</td>
+<td>compiler, domain-specific language, hardware description language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q2357189">
+<td><a href="languages/structured-entity-relationship-model.html">Structured Entity Relationship Model</a></td>
+<td></td>
+<td>modeling language</td>
+<td>1988</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q11242972">
+<td><a href="languages/structured-function-description-language.html">Structured Function Description Language</a></td>
+<td>Hardware description language</td>
+<td>hardware description language, modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1387402">
+<td><a href="languages/systemverilog.html">SystemVerilog</a></td>
+<td>hardware description and hardware verification language</td>
+<td>hardware description language, hardware verification language, programming language</td>
+<td>2002</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q114409">
+<td><a href="languages/turtle.html">Turtle</a></td>
+<td>format for expressing data in the RDF data model</td>
+<td>data serialization format, field of study, file format, ontology language, W3C Recommendation</td>
+<td>2003</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q7894081">
+<td><a href="languages/universal-systems-language.html">Universal Systems Language</a></td>
+<td>modeling language</td>
+<td>modeling language, specification language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q113461149">
+<td><a href="languages/use-case-map.html">Use Case Map</a></td>
+<td>Use case maps visually describe the functional requirements for a software system.</td>
 <td>modeling language</td>
 <td></td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td><a href="tools/astah.html">Astah</a>, <a href="tools/astah-sysml.html">Astah SysML</a>, <a href="tools/astah-system-safety.html">Astah System Safety</a></td>
-</tr>
-<tr>
-<td><a href="languages/unified-modeling-language.html">Unified Modeling Language</a></td>
-<td>software system design modeling tool</td>
-<td>academic discipline, data modeling language, field of study</td>
-<td>1995</td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td><a href="tools/argouml.html">ArgoUML</a>, <a href="tools/astah.html">Astah</a>, <a href="tools/bouml.html">BOUML</a>, <a href="tools/enterprise-architect.html">Enterprise Architect</a>, <a href="tools/gaphor.html">Gaphor</a>, <a href="tools/ibm-rational-rose-xde.html">IBM Rational Rose XDE</a>, <a href="tools/jetuml.html">JetUML</a>, <a href="tools/magicdraw.html">MagicDraw</a>, <a href="tools/microsoft-visual-modeler.html">Microsoft Visual Modeler</a>, <a href="tools/modelio.html">Modelio</a>, <a href="tools/nclass.html">NClass</a>, <a href="tools/papyrus.html">Papyrus</a>, <a href="tools/plantuml.html">PlantUML</a>, <a href="tools/poseidon-for-uml.html">Poseidon for UML</a>, <a href="tools/processon.html">ProcessOn</a>, <a href="tools/rational-rhapsody.html">Rational Rhapsody</a>, <a href="tools/software-ideas-modeler.html">Software Ideas Modeler</a>, <a href="tools/staruml.html">StarUML</a>, <a href="tools/together.html">Together</a>, <a href="tools/umbrello.html">Umbrello</a>, <a href="tools/uml-designer.html">UML Designer</a>, <a href="tools/uml-node.html">UML node</a>, <a href="tools/umlet.html">UMLet</a>, <a href="tools/umodel.html">UModel</a></td>
-</tr>
-<tr>
-<td><a href="languages/xml-metadata-interchange.html">XML Metadata Interchange</a></td>
-<td>Object Management Group standard</td>
-<td>file format</td>
 <td></td>
-<td><a href="vendors/object-management-group.html">Object Management Group</a></td>
-<td><a href="tools/argouml.html">ArgoUML</a>, <a href="tools/umbrello.html">Umbrello</a></td>
+<td></td>
+</tr>
+<tr id="Q827773">
+<td><a href="languages/verilog.html">Verilog</a></td>
+<td>hardware description language</td>
+<td>hardware description language, modeling language</td>
+<td>1984</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q209455">
+<td><a href="languages/vhdl.html">VHDL</a></td>
+<td>Hardware Description Language</td>
+<td>hardware description language, modeling language</td>
+<td>1983</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q826165">
+<td><a href="languages/web-ontology-language.html">Web Ontology Language</a></td>
+<td>family of knowledge representation languages</td>
+<td>file format, ontology language, W3C Recommendation</td>
+<td>2004</td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q16889021">
+<td><a href="languages/web-rule-language.html">Web Rule Language</a></td>
+<td>rule-based ontology language</td>
+<td>file format family, ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q55872899">
+<td><a href="languages/wikidatan.html">Wikidatan</a></td>
+<td>ontology language used by Wikidata</td>
+<td>ontology language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q9383238">
+<td><a href="languages/xilinx-netlist-format.html">Xilinx Netlist Format</a></td>
+<td>hardware description language by Xilinx</td>
+<td>hardware description language</td>
+<td></td>
+<td><a href="vendors/xilinx.html">Xilinx</a></td>
+<td></td>
+</tr>
+<tr id="Q8045818">
+<td><a href="languages/yang.html">YANG</a></td>
+<td>data modeling language</td>
+<td>data modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q63888551">
+<td><a href="languages/zx-calculus.html">ZX-calculus</a></td>
+<td>graphical language for quantum processes</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr id="Q1967600" class="ended">
+<td><a href="languages/webml.html">WebML</a> <abbr class="ended-mark" title="ended 2016">†</abbr></td>
+<td>visual modeling language for data-intensive web applications</td>
+<td>modeling language</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </table>
 </div>
 <hr>
-<p>TODO · <a href="colophon.html">Colophon</a></p>
+<p>TODO · <a href="colophon.html">Colophon</a> · <a href="https://github.com/not7cd/mbse.cool">Source</a></p>
 </body>
 </html>

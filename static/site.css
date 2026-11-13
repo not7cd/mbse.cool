@@ -34,7 +34,11 @@ hr {
     margin: 1rem 0;
 }
 
+/* Tables fill the column and keep the same column widths everywhere (fixed layout; widths set on
+ * the header cells by kind). Description columns take what's left. Wide tables scroll on phones. */
 table {
+    width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
     border: 2px solid var(--fg);
     box-shadow: 4px 4px 0 var(--fg);
@@ -47,6 +51,16 @@ th, td {
     vertical-align: top;
 }
 th { font-weight: 700; }
+td { overflow-wrap: anywhere; }
+table.wide { min-width: 48rem; }
+th.w-name { width: 20%; }
+th.w-kind { width: 14%; }
+th.w-year { width: 5.5em; }
+th.w-num { width: 6.5em; }
+th.w-dev { width: 15%; }
+th.w-dev-wide { width: 40%; }
+th.w-os { width: 12%; }
+th.w-links { width: 18%; }
 
 dl { margin-bottom: 1rem; }
 dt { font-weight: 700; }
@@ -113,7 +127,7 @@ dd, p, li, blockquote { overflow-wrap: anywhere; }
     blockquote { padding: 0.75rem; }
 }
 
-/* Link previews (static/peek.js loads peek/<page>.html into this box) */
+/* Link previews (static/peek.js loads _peek/<page>.html into this box) */
 .peek {
     position: absolute;
     z-index: 10;
@@ -131,3 +145,67 @@ dd, p, li, blockquote { overflow-wrap: anywhere; }
 .peek .pictogram { margin-right: 0.4em; }
 .peek-meta, .peek-credit { color: var(--muted); }
 .peek-credit { font-size: 0.75rem; }
+
+/* tools of one suite, nested under it in link tables */
+ul.nested { margin: 0.25em 0 0; padding-left: 1.2em; }
+ul.nested li { margin: 0; }
+
+/* tiny badges on tool rows: operating systems, open source / proprietary */
+abbr.badge {
+    font-size: 0.65em;
+    border: 1px solid var(--fg);
+    padding: 0 0.25em;
+    vertical-align: 0.15em;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: help;
+}
+/* licence badges are slanted rhombi (outline drawn as a clipped fg layer under a clipped bg layer) */
+abbr.badge.licence {
+    border: none;
+    position: relative;
+    display: inline-block;
+    line-height: 1.2;
+    isolation: isolate;
+    padding: 1px 0.7em;
+    background: var(--fg);
+    clip-path: polygon(0.45em 0, 100% 0, calc(100% - 0.45em) 100%, 0 100%);
+}
+abbr.badge.licence::before {
+    content: "";
+    position: absolute;
+    inset: 1px 1.5px;
+    z-index: -1;
+    background: var(--bg);
+    clip-path: polygon(0.42em 0, 100% 0, calc(100% - 0.42em) 100%, 0 100%);
+}
+
+/* "site under construction" banner: the text twice, sliding by one copy so the loop is seamless
+ * and the strip starts full (a <marquee> starts empty). Yellow in both themes, like warning tape. */
+.construction {
+    overflow: hidden;
+    background: #ff0;
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding: 0.2em 0;
+    /* full window width and flush with the top, out of the centred, padded body */
+    margin: -1rem calc(50% - 50vw) 0.5em;
+}
+html { overflow-x: clip; }  /* 100vw includes the scrollbar; don't let that scroll sideways */
+.construction .track { display: flex; width: max-content; animation: construction 120s linear infinite; }
+.construction span { white-space: pre; }
+@keyframes construction { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .construction .track { animation: none; } }
+
+/* things that ended (discontinued, dissolved, abandonware): last in lists, greyed, with a dagger */
+.ended, .ended a, a.ended { color: var(--muted); }
+abbr.ended-mark { text-decoration: none; cursor: help; }
+
+/* fate of something that ended, under its title */
+.fate {
+    display: inline-block;
+    border: 2px dashed var(--fg);
+    padding: 0.3em 0.7em;
+    margin-bottom: 1rem;
+}
